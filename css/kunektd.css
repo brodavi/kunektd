@@ -1,0 +1,44 @@
+body {
+    color: #999999;
+}
+
+#title001 {
+    text-align: center;
+}
+
+#reallybigtext {
+    width: 1200px;
+    font-size: 8em;
+    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+    color: #999999;
+}
+
+.canvasdiv canvas {
+    position: relative;
+    left: 185px;
+}
+
+.runediv {
+    width: 666px;
+    padding: 50px;
+    text-align: center;
+}
+
+.navrune:hover {
+    width: 110px;
+    height: 110px;
+}
+
+.dialogue {
+    font-size: 1.5em;
+    color: #22ff22;
+}
+
+.action {
+    font-size: 1.7em;
+    color: #2222ff;
+}
+
+#credits {
+    font-size: 1.7em;
+}

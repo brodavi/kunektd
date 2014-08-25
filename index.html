@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>kunektd | a game | by brodavi</title>
+    
+    <meta name="description" content="kunektd is a gmae" />
+    <meta name="author" content="brodavi" />
+
+    <link href="css/kunektd.css" rel="stylesheet" />
+    
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+
+    <script src="bower_components/platform/platform.js"></script>
+    <link rel="import" href="bower_components/polymer/polymer.html">
+
+    <!-- importing web components -->
+    <link rel="import" href="x-sky.html">
+
+    <script src="bower_components/phaser-official/build/phaser.min.js"></script>
+
+    <script src="kunektd.js"></script>
+
+    <script src="kalisha.js"></script>
+    <script src="skolu.js"></script>
+    <script src="entos.js"></script>
+    <script src="havonti.js"></script>
+    <script src="music.js"></script>
+    <script src="Blob.js"></script>
+    <script src="player-small.js"></script>
+  </head>
+  <body class="impress-not-supported">
+
+    <x-sky count="200" height="1080"></x-sky>
+
+    <div class="fallback-message">
+      <p>Your browser <b>doesn't support the features required</b> by this game, so have no idea what you are seeing right now, because I don't have time to deal with it. Sorry.</p>
+      <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+    </div>
+
+    <!--
+        To change the duration of the transition between slides use 
+        `data-transition-duration="2000"` giving it
+        a number of ms. It defaults to 1000 (1s).
+        
+        You can also control the perspective with `data-perspective="500"` 
+        giving it a number of pixels.
+        It defaults to 1000. You can set it to 0 if you don't want any 3D effects.
+      -->
+    <div id="impress">
+
+      <div id="title001" class="step" data-x="-8000" data-y="-1500">
+        <p id="reallybigtext">
+          te vorltz ur kunektd
+        </p>
+        <h2>
+          wasd
+        </h2>
+        <h3>
+          (aka the worlds are connected)
+        </h3>
+        <img class="navrune" src="assets/rune002.png" data-id="kalisha" />
+        <h3>
+          A game by brodavi for Ludum Dare the 30th
+        </h3>
+      </div>
+
+<!-- KALISHA WORLD ====================================================== -->
+      <div id="kalisha"
+           class="step"
+           data-x="-2000"
+           data-y="-1500"
+           >
+        <div id="kalishadiv"
+             class="canvasdiv"></div>
+        <div class="runediv">
+          <div class="notification">this is a test bit of text</div>
+          <img id="kalishaskolulink" class="navrune" src="assets/rune001.png" data-id="skolu" hidden />
+          <img id="kalishaentoslink"class="navrune" src="assets/rune006.png" data-id="entos" hidden />
+        </div>
+      </div>
+<!-- /KALISHA WORLD ====================================================== -->
+
+<!-- SKOLU WORLD ====================================================== -->
+      <div id="skolu"
+           class="step"
+           data-x="2000"
+           data-y="-1500"
+           data-z="3000"
+           data-rotate-z="69"
+           >
+        <div id="skoludiv"
+             class="canvasdiv"></div>
+        <div class="runediv">
+          <div class="notification">this is a test bit of text</div>
+          <img class="navrune" src="assets/rune002.png" data-id="kalisha" />
+          <img id="skoluentoslink"class="navrune" src="assets/rune006.png" data-id="entos" hidden />
+        </div>
+      </div>
+<!-- /SKOLU WORLD ====================================================== -->
+
+<!-- ENTOS WORLD ====================================================== -->
+
+      <div id="entos"
+           class="step"
+           data-x="3200"
+           data-y="1300"
+           data-z="100"
+           data-rotate-x="142">
+        <div id="entosdiv"
+             class="canvasdiv"></div>
+        <div class="runediv">
+          <div class="notification">this is a test bit of text</div>
+          <img class="navrune" src="assets/rune001.png" data-id="skolu" />
+          <img class="navrune" src="assets/rune002.png" data-id="kalisha" />
+        </div>
+      </div>
+
+<!-- /ENTOS WORLD ====================================================== -->
+
+
+<!-- HAVONTI WORLD ====================================================== -->
+
+      <div id="havonti"
+           class="step"
+           data-x="6200"
+           data-y="2300"
+           data-z="-1100"
+           data-rotate-x="-20"
+           data-rotate-y="66">
+        <div id="havontidiv"
+             class="canvasdiv"></div>
+        <div class="runediv">
+          <div class="notification">this is a test bit of text</div>
+        </div>
+      </div>
+
+<!-- /HAVONTI WORLD ====================================================== -->
+
+<!-- ENDING 1 ====================================================== -->
+      <div id="ending1"
+           class="step"
+           data-x="850"
+           data-y="3000"
+           data-rotate-z="40">
+          <h1>and what the TRAVELER didn't know was that in reality: this was all a game! dun dun dunnn ... here is one of two</h1>
+          <div class="runediv">
+            <img src="assets/photo1.jpg" />
+          </div>
+          <div class="runediv">
+            <img class="navrune" src="assets/rune003.png" data-id="credits" />
+          </div>
+      </div>
+<!-- /ENDING 1 ====================================================== -->
+
+<!-- ENDING 2 ====================================================== -->
+      <div id="ending2"
+           class="step"
+           data-x="3500"
+           data-y="4500"
+           data-rotate="180"
+           data-z="-13000">
+          <h1>... and so the TRAVELER chose ending 2 ... and he/she was presented with one of two behind-the-scenes looks at the making of ...</h1>
+          <div class="runediv">
+            <img src="assets/photo2.jpg" />
+          </div>
+          <div class="runediv">
+            <img class="navrune" src="assets/rune003.png" data-id="credits" />
+          </div>
+      </div>
+<!-- /ENDING 2 ====================================================== -->
+
+<!-- <\!-- ENDING 3 ====================================================== -\-> -->
+<!--       <div id="ending3" -->
+<!--            class="step" -->
+<!--            data-x="2825" -->
+<!--            data-y="6325" -->
+<!--            data-z="11000" -->
+<!--            data-rotate="300"> -->
+<!--           <h1>this is ENDING 3</h1> -->
+<!--           <img class="navrune" src="assets/rune001.png" data-id="title001" /> -->
+<!--       </div> -->
+<!-- <\!-- /ENDING 3 ====================================================== -\-> -->
+
+      <!--
+          So to make a summary of all the possible attributes used 
+          to position presentation steps, we have:
+
+          * `data-x`, `data-y`, `data-z` -- they define the position 
+          of **the center** of step element on
+          the canvas in pixels; their default value is 0;
+          * `data-rotate-x`, `data-rotate-y`, 'data-rotate-z`, 
+          `data-rotate` -- they define the rotation of
+          the element around given axis in degrees; their default value 
+          is 0; `data-rotate` and `data-rotate-z`
+          are exactly the same;
+          * `data-scale` -- defines the scale of step element; default value is 1
+        -->
+
+<!-- CREDITS WORLD ====================================================== -->
+      <div id="credits"
+           class="step"
+           data-x="3000"
+           data-y="1500"
+           data-z="16000">
+        <h1>Thank YOU for playing! :D</h1>
+        <h2>insert credits here</h2>
+        <h3>reload to play again</h3>
+        <p>sorry.. restarting game without reloading is broken :(</p>
+        <div class="runediv">
+          <img src="assets/rune004.png" />
+        </div>
+      </div>
+<!-- /CREDITS WORLD ====================================================== -->
+
+    </div>
+
+    <script src="js/impress.js"></script>
+    <script>var api = impress(); api.init();</script>
+
+  </body>
+</html>
